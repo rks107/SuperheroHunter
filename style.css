@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#home-page{
+    /* display: none; */
+}
+
+/* header */
+header {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
+}
+header h1 {
+   margin-top: 0px;
+   color: rgba(0,0,0,0.6);
+}
+header p{
+    color: rgba(0,0,0,0.5);
+}
+
+/* Form */
+
+#form {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+}
+
+label{
+    color: rgba(0,0,0,0.7);
+}
+
+#superhero-name {
+    font-size: 1rem;
+    padding: 2px;
+    width: 80vw;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* main  */
+
+#superman-container {
+    /* width: 80vh; */
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.superman-items {
+    margin: 10px 0px;
+    height: 350px;
+    width: 300px;
+    box-shadow: 0 0 5px black;
+}
+.superman-items img {
+    height: 300px;
+    width: 300px;
+}
+
+.superman-items h2 {
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+    color: rgba(0,0,0,0.7);
+}
+
+/* superman page */
+
+#superman-page {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#close-page {
+    background-color: black;
+    text-align: right;
+    color: white;
+    cursor: pointer;
+}
+
+#title {
+    height: 20px;
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 400px;
+    margin: 50px auto;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+#superman-image{
+    width: 500px;
+    /* border: 1px solid black; */
+}
+#superman-image img{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+#superman-info {
+    width:800px;
+    /* border: 1px solid black; */
+}
+
+#superman-info p {
+    font-size: large;
+    padding-left: 20px;
+}
+
+.temp {
+    height: 200px;
+    width: 200;
+    background-color: red;
+}
