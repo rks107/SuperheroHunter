@@ -1,16 +1,28 @@
+$('#home-tab').click(function(){
+    $('#superman-container').css("display","flex");
+    $('.favorite').css("display","none");
+    $('#superman-page').css("display","none");
+});
+
+// For Favorite Superman Page
 $('#favorite-superman-button').click(function(){
     $('.favorite').css("display","flex");
 
     $('#superman-container').css("display","none");
 });
+
+// Search by Enter Key
 $('#superhero-name').on("keyup", function(event){
     if(event.keyCode == 13 && $('#superhero-name').val() != "") {
         displaySuperman();
     }
 });
 
+// Search By clicking Submit button
 $('#submit-button').click(displaySuperman);
 
+
+// Function For displaying Superman Information
 function displaySuperman(){
 
     let superHeroName = $('#superhero-name').val();
@@ -18,7 +30,7 @@ function displaySuperman(){
 
     $('#superman #title').remove();
     $('#superman #content').remove();
-    for(let i =1;i<=200;i++)
+    for(let i =1;i<=731;i++)
     {
         let tempurl = "https://www.superheroapi.com/api.php/125397225836028/"+ i ;
         $.get(tempurl,function(data){
@@ -31,6 +43,8 @@ function displaySuperman(){
     }
     
  
+    // This setTimeout function is for wait till run above for loop run for searching superman name 
+    // Either the supeman is of given searched name or not 
     setTimeout(function(){
 
         console.log(flag);
@@ -75,8 +89,8 @@ $('#close-page').click(function(){
     $('#superman-page').css("display","none");
 })
 
-// Superman for home page
-for(let i =1; i<=100;i++)
+// Supermans for home page
+for(let i =1; i<=731;i++)
 {
     let url = "https://www.superheroapi.com/api.php/125397225836028/"+ i ;
     
@@ -116,6 +130,7 @@ for(let i =1; i<=100;i++)
                  });
         });
 
+        // for adding superman into favorite superman page
         var fav = $('<i class="fas fa-thumbs-up"></i>').click(function(){
             var ev = $(this).parent();
             ev.fadeOut(function(){
@@ -125,6 +140,7 @@ for(let i =1; i<=100;i++)
             $(this).remove();
         });
 
+        // For deleting superman 
         var del = $('<i class="fas fa-trash"></i>').click(function(){
             var ev = $(this).parent();
             ev.fadeOut(function(){
