@@ -3,10 +3,6 @@ body {
     font-family: sans-serif;
 }
 
-#home-page{
-    /* display: none; */
-}
-
 /* header */
 header {
     width: 100%;
@@ -20,6 +16,13 @@ header h1 {
 }
 header p{
     color: rgba(0,0,0,0.5);
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
 }
 
 /* Form */
@@ -41,6 +44,7 @@ label{
     font-size: 1rem;
     padding: 2px;
     width: 80vw;
+    outline: none;
 }
 
 button {
@@ -52,10 +56,24 @@ button {
     cursor: pointer;
 }
 
-/* main  */
+/* Favorite page */
+.favorite {
+    width: 90vw;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    display: none;
+}
+
+.favorite .superman-items{
+    margin: 2px 6px;
+}
+
+/* Home Page  */
 
 #superman-container {
-    /* width: 80vh; */
     margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
@@ -64,8 +82,9 @@ button {
 
 .superman-items {
     margin: 10px 0px;
-    height: 350px;
+    height: 400px;
     width: 300px;
+    background-color: rgba(0,0,0,0.1);
     box-shadow: 0 0 5px black;
 }
 .superman-items img {
@@ -74,9 +93,22 @@ button {
 }
 
 .superman-items h2 {
+    cursor: pointer;
     background-color: rgba(0,0,0,0.2);
     text-align: center;
     color: rgba(0,0,0,0.7);
+}
+.fa-trash {
+    float: right;
+    margin-right: 10px;
+}
+.fa-thumbs-up {
+    margin-left: 10px;
+}
+.superman-items i {
+    cursor: pointer;
+    font-size: large;
+    color: cadetblue;
 }
 
 /* superman page */
@@ -104,31 +136,31 @@ button {
 #content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 90%;
-    height: 400px;
+    width: 90vw;
     margin: 50px auto;
     box-shadow: 0 0 5px black;
     border-radius: 5px;
+    margin-bottom: 0px;
 }
 
 #superman-image{
-    width: 500px;
-    /* border: 1px solid black; */
+    width: 40vw;
+    height: 40vw;
 }
 #superman-image img{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
 }
 
 #superman-info {
-    width:800px;
-    /* border: 1px solid black; */
+    width:40vw;
+    font-size: 1.5rem;
 }
 
 #superman-info p {
-    font-size: large;
     padding-left: 20px;
 }
 
@@ -136,4 +168,27 @@ button {
     height: 200px;
     width: 200;
     background-color: red;
+}
+
+/* media Query for different screen size */
+@media screen and (max-width:769px) {
+    #superman-image{
+        height: 50vw;
+        width: 50vw;
+    }
+    #superman-info {
+        width:35vw;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #superman-image{
+        height: 100vw;
+        width: 100vw;
+    }
+    #superman-info {
+        width:100vw;
+        font-size: 1rem;
+    }
 }
